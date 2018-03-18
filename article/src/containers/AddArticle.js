@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { addArticle } from '../actions'
+import { addArticle } from '../actions'
 
 let AddArticle = ({ dispatch }) => {
   let input
@@ -12,7 +12,7 @@ let AddArticle = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        // dispatch(addArticle(input.value))
+        dispatch(addArticle(input.value))
         input.value = ''
       }}>
         <input ref={node => {
